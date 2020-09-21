@@ -13,12 +13,10 @@ namespace CarGarage
         public bool AutoBrakeActive { get; set; }
         public void SetMake(string make)
         {
-            make = "Honda";
             Make = make;
         }
         public void SetModel(string model)
         {
-            model = "Accord";
             Model = model;
         }
         public int GetSpeed()
@@ -46,6 +44,10 @@ namespace CarGarage
             {
                 Speed += 10;
             }
+            else
+            {
+                Speed = 100;
+            }
         }
         public void Brake()
         {
@@ -59,7 +61,7 @@ namespace CarGarage
             }
             else if (Speed < 7 && Speed >= 0)
             {
-                Speed--;
+                Speed = 0;
             }
         }
     }
